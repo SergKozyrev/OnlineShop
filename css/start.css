@@ -1,0 +1,301 @@
+/* Default */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #f14a58;
+}
+
+body,
+p,
+ul,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* Custom */
+
+body {
+    background-color: #fff;
+    color: #111;
+    line-height: 1;
+    letter-spacing: 0.03em;
+}
+
+/* Main start */
+
+/* Slider start */
+
+.slider {
+    height: 850px;
+}
+
+.slider-item {
+    max-width: 100%;
+    height: 850px;
+}
+
+.slider-item1 {
+    background: url(../images/slider-item-1-desktop.jpg) no-repeat center / cover;
+    background-size: 100% 100%;
+}
+
+.slider-item2 {
+    background: url(../images/slider-item-2-desktop.jpg) no-repeat center / cover;
+    background-size: 100% 100%;
+}
+
+.slider-item3 {
+    background: url(../images/slider-item-3-desktop.jpg) no-repeat center / cover;
+    background-size: 100% 100%;
+}
+
+/* Slider media */
+@media screen and (max-width:1024px) {
+
+    .slider,
+    .slider-item {
+        height: 820px;
+    }
+
+    .slider-item1 {
+        background: url(../images/slider-item-1-tablet.jpg);
+        background-size: 100% 100%;
+    }
+
+    .slider-item2 {
+        background: url(../images/slider-item-2-tablet.jpg);
+        background-size: 100% 100%;
+
+    }
+
+    .slider-item3 {
+        background: url(../images/slider-item-3-tablet.jpg);
+        background-size: 100% 100%;
+    }
+}
+
+/* Slider end */
+
+/* Banner start */
+
+.banner {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    height: 385px;
+}
+
+.banner-left,
+.banner-right {
+    width: 50%;
+
+}
+
+.banner-left {
+    background: url(../images/nike.png) no-repeat;
+    background-size: 100% 100%;
+    border-right: 1px solid #e5e5e5;
+}
+
+.banner-right {
+    background: url(../images/capsHats.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Banner media */
+@media screen and (max-width:1024px) {
+    .banner {
+        height: 251px;
+    }
+
+    .banner-left {
+        width: 67%;
+        background: url(../images/nike-table.png);
+        background-size: 100% 100%;
+    }
+
+    .banner-right {
+        width: 33%;
+        background: url(../images/bag-table.png);
+        background-size: 100% 100%;
+    }
+}
+
+/* Banner end */
+
+/* Arrivals start */
+
+.arrivals {
+    padding: 140px 0 80px;
+    text-align: center;
+}
+
+.arrivals-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 95px;
+}
+
+.arrivals-wrapp {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+.card {
+    display: block;
+    max-width: 240px;
+    text-align: center;
+    transition-duration: .3s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card-img {
+    position: relative;
+    max-height: 340px;
+}
+
+.card:hover .card-img-overlay {
+    opacity: 1;
+}
+
+.card:hover .card-title {
+    color: #f14a58;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #f14a58;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 340px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 44px;
+    margin-bottom: 18px;
+    transition: color .3s;
+}
+
+.card-price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-discount-price {
+    margin-right: 3px;
+    color: #757575;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-price::before,
+.card-discount-price::before {
+    content: "£";
+}
+
+.card-has-new,
+.card-placeholder {
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-size: 14px;
+    color: #757575;
+}
+
+.arrivals-btn {
+    display: inline-block;
+    padding: 24px 105px;
+    border: 1px solid #e5e5e5;
+    font-family: 'Open sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.arrivals-btn:hover {
+    border-color: #f14a58;
+}
+
+/* Arrivals media */
+@media screen and (max-width:1024px) {
+    .arrivals {
+        padding: 99px 0 137px;
+    }
+
+    .card {
+        max-width: 204px;
+    }
+
+    .card-img {
+        max-height: 289px;
+    }
+
+    .arrivals-btn {
+        padding: 24px 93px;
+        font-size: 20px;
+    }
+}
+
+/* Arrivals end */
+
+/* Main end */

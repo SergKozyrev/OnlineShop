@@ -1,0 +1,78 @@
+/* Arrows */
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    position: absolute;
+    top: 332px;
+    display: block;
+    width: 35px;
+    height: 110px;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 0;
+    background: url(../../images/slider-prev.jpg);
+}
+
+
+.slick-next {
+    right: 0;
+    background: url(../../images/slider-next.jpg);
+}
+
+
+/* Dots */
+.slick-dots {
+    position: absolute;
+    bottom: 37px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #d2d2d2;
+    margin: 0 11px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li.slick-active {
+    background: #f14a58;
+}

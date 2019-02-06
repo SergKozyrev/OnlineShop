@@ -1,0 +1,359 @@
+/* Header start */
+.header-wrap,
+.header-nav {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 15px;
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 0;
+}
+
+.header-logo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+}
+
+.user-sign-up,
+.user-bag {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.user-bag {
+    margin-left: 60px;
+}
+
+.bag-icon {
+    margin-right: 16px;
+}
+
+.amount::before {
+    content: "(";
+}
+
+.amount::after {
+    content: ")";
+}
+
+.header-nav {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.header-nav-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.header-nav-input {
+    background: #fff url(../images/search-icon.jpg) no-repeat 100% 0;
+    font-size: 12px;
+    color: #a8a8a8;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+    transition: .1s;
+}
+
+.header-nav-input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #a8a8a8;
+}
+
+.header-nav-input::-moz-placeholder {
+    font-size: 12px;
+    color: #a8a8a8;
+}
+
+.header-nav-input:-moz-placeholder {
+    font-size: 12px;
+    color: #a8a8a8;
+}
+
+.header-nav-input:-ms-input-placeholder {
+    font-size: 12px;
+    color: #a8a8a8;
+}
+
+/* Header media */
+@media screen and (max-width:1024px) {
+    .page-header {
+        margin-bottom: 25px;
+    }
+
+    .header-wrap,
+    .header-nav {
+        max-width: 688px;
+        font-size: 12px;
+    }
+
+    .header-logo {
+        font-size: 26px;
+    }
+
+    .header-nav-list {
+        position: relative;
+        padding-right: 54px;
+    }
+
+    .header-nav-input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15px;
+        border: none;
+    }
+
+    .header-nav-input::-webkit-input-placeholder {
+        font-size: 0;
+    }
+
+    .header-nav-input::-moz-placeholder {
+        font-size: 0;
+    }
+
+    .header-nav-input:-moz-placeholder {
+        font-size: 0;
+    }
+
+    .header-nav-input:-ms-input-placeholder {
+        font-size: 0;
+    }
+
+    .header-nav-input:focus {
+        top: -5px;
+        width: 250px;
+        padding: 4px 0 5px;
+        background-position: 100% 50%;
+        box-shadow: -19px 0 7px -1px #fff;
+        border-bottom: 2px solid #e5e5e5;
+    }
+
+    .header-nav-input:focus::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+
+    .header-nav-input:focus::-moz-placeholder {
+        font-size: 12px;
+    }
+
+    .header-nav-input:focus:-moz-placeholder {
+        font-size: 12px;
+    }
+
+    .header-nav-input:focus:-ms-input-placeholder {
+        font-size: 12px;
+    }
+
+}
+
+/* Header end */
+
+/* Footer start */
+.footer-top {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 60px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    width: 50%;
+}
+
+.footer-links,
+.footer-care {
+    width: 50%;
+    padding: 55px 0 110px;
+}
+
+.footer-links-title,
+.footer-care-title,
+.footer-twitter-title,
+.footer-phone-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+
+.footer-links-list,
+.footer-care-list,
+.footer-twitter-desc,
+.footer-phone-desc {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer-links-list li+li,
+.footer-care-list li+li {
+    margin-top: 25px;
+}
+
+.footer-left {
+    border-right: 1px solid #e5e5e5;
+}
+
+.footer-right {
+    flex-direction: column;
+    padding: 55px 0 110px 60px;
+}
+
+.footer-contact {
+    display: flex;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.footer-contact-twitter,
+.footer-contact-phone {
+    width: 50%;
+}
+
+.footer-twitter-title,
+.footer-phone-title {
+    margin-bottom: 20px;
+}
+
+.footer-twitter-desc a {
+    font-weight: 700;
+}
+
+.footer-twitter-desc img {
+    margin-right: 7px;
+}
+
+.footer-social-desc {
+    display: block;
+    width: 50%;
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-size: 16px;
+    color: #757575;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+.footer-social-links a+a {
+    margin-left: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.footer-copyright,
+.footer-info {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.footer-share {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.footer-share-tooltip {
+    position: absolute;
+    top: 50%;
+    right: -55px;
+    transform: translateY(-50%);
+    padding: 7px;
+    background: #f4f4f4;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer-share-tooltip::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    right: 100%;
+    top: 50%;
+    transform: translate(50%, -50%) rotate(-45deg);
+    background: #f4f4f4;
+}
+
+.footer-share:hover .footer-share-tooltip {
+    color: #000;
+}
+
+.footer-info {
+    display: flex;
+}
+
+.footer-info li {
+    margin-left: 30px;
+}
+
+/* Footer media */
+@media screen and (max-width:1024px) {
+    .footer-top {
+        padding: 0 40px;
+    }
+
+    .footer-left {
+        width: 64%;
+        border-right: none;
+    }
+
+    .footer-right {
+        width: 36%;
+        padding-left: 0;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+    }
+
+    .footer-contact-twitter,
+    .footer-contact-phone {
+        width: 100%;
+    }
+
+    .footer-contact-twitter {
+        margin-bottom: 41px;
+    }
+
+    .footer-social-desc {
+        display: none;
+    }
+
+    .footer-bottom {
+        padding: 30px 40px;
+    }
+
+    .footer-share {
+        font-size: 16px;
+    }
+}
+
+/* Footer end */
