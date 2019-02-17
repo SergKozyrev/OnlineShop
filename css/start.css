@@ -51,6 +51,12 @@ ul {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 375px;
+    }
+}
+
 /* Custom */
 
 body {
@@ -113,6 +119,30 @@ body {
     }
 }
 
+@media screen and (max-width:768px) {
+
+    .slider,
+    .slider-item {
+        height: 540px;
+    }
+
+    .slider-item1 {
+        background: url(../images/slider-item-1-mobile.jpg);
+        background-size: 100% 100%;
+    }
+
+    .slider-item2 {
+        background: url(../images/slider-item-2-mobile.jpg);
+        background-size: 100% 100%;
+
+    }
+
+    .slider-item3 {
+        background: url(../images/slider-item-3-mobile.jpg);
+        background-size: 100% 100%;
+    }
+}
+
 /* Slider end */
 
 /* Banner start */
@@ -157,6 +187,24 @@ body {
         width: 33%;
         background: url(../images/bag-table.png);
         background-size: 100% 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .banner {
+        height: 239px;
+    }
+
+    .banner-left {
+        width: 100%;
+        background: url(../images/nike-mobile.png);
+        background-size: 100% 100%;
+        border-right: none;
+    }
+
+    .banner-right {
+        display: none;
     }
 }
 
@@ -278,6 +326,10 @@ body {
 
 /* Arrivals media */
 @media screen and (max-width:1024px) {
+    .arrivals-wrapp {
+        max-width: 688px;
+    }
+
     .arrivals {
         padding: 99px 0 137px;
     }
@@ -290,9 +342,59 @@ body {
         max-height: 289px;
     }
 
+    .card-img-overlay {
+        line-height: 289px;
+    }
+
+    .arrivals-wrapp {
+        margin-bottom: 89px;
+    }
+
     .arrivals-btn {
         padding: 24px 93px;
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .arrivals-wrapp {
+        max-width: 355px;
+    }
+
+    .arrivals-title {
+        font-size: 26px;
+        margin-bottom: 50px;
+    }
+
+    .arrivals {
+        padding: 62px 0 106px;
+    }
+
+    .card {
+        max-width: 158px;
+    }
+
+    .card-img {
+        max-height: 223px;
+    }
+
+    .card-img-overlay {
+        line-height: 223px;
+    }
+
+    .card-title {
+        margin-top: 33px;
+        margin-bottom: 14px;
+        font-size: 12px;
+    }
+
+    .arrivals-wrapp {
+        margin-bottom: 72px;
+    }
+
+    .arrivals-btn {
+        padding: 20px 53px;
+        font-size: 18px;
     }
 }
 

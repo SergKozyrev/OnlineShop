@@ -86,7 +86,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 items.appendChild(createItem(data[i]));
             }
         } else if (document.body.clientWidth <= 768) {
-            for (let i = itemsCount - 1; i < itemsCount; i++) {
+            for (let i = itemsCount - 1; i < itemsCount + 1; i++) {
                 if (itemsCount > data.length) this.remove();
                 items.appendChild(createItem(data[i]));
             }

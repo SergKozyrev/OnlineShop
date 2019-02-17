@@ -3,7 +3,15 @@ $(document).ready(function () {
         dots: true,
         infinite: true,
         fade: true,
-        speed: 500
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 500,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false
+            }
+        }]
     });
 });
 

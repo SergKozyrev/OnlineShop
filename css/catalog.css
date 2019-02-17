@@ -51,6 +51,12 @@ ul {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 375px;
+    }
+}
+
 /* Custom */
 
 body {
@@ -222,6 +228,14 @@ body {
     background: url(../images/close.png) no-repeat;
 }
 
+.filter-list-mobile:hover::after {
+    cursor: pointer;
+}
+
+.close-filter:hover {
+    cursor: pointer;
+}
+
 /* Filter media */
 @media screen and (max-width:1024px) {
     .catalog-filter {
@@ -343,6 +357,43 @@ body {
 
     .catalog-filter.filter-open .filter-list-mobile .close-filter {
         display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .filter-list-mobile {
+        padding: 21px 20px;
+        overflow: hidden;
+    }
+
+    .filter-list-item-mobile {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .close-filter {
+        top: 19px;
+        right: 20px;
+        background-color: #fff;
+        box-shadow: 20px 0 55px 65px rgb(255, 255, 255);
+    }
+
+    .filter-list-mobile::after {
+        right: 20px;
+        background: #fff;
+        box-shadow: 20px 0 55px 70px rgb(255, 255, 255);
+    }
+
+    .filter-list-item {
+        width: 50%;
+    }
+
+    .catalog-filter.filter-open .filter-list {
+        padding: 40px 20px 0;
+    }
+
+    .filter-sub-list {
+        margin-bottom: 40px;
     }
 }
 
@@ -496,6 +547,10 @@ body {
         max-height: 289px;
     }
 
+    .item-img-overlay {
+        line-height: 289px;
+    }
+
     .promo-title {
         font-size: 20px;
     }
@@ -503,6 +558,54 @@ body {
     .catalog-btn {
         padding: 24px 72px;
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catalog-items {
+        margin-bottom: 100px;
+    }
+
+    .items-wrap {
+        padding: 20px 20px 0;
+    }
+
+    .catalog-item {
+        max-width: 158px;
+        margin-bottom: 50px;
+    }
+
+    .catalog-item-img {
+        max-height: 223px;
+    }
+
+    .item-img-overlay {
+        line-height: 223px;
+    }
+
+    .catalog-item-title {
+        margin-top: 33px;
+        margin-bottom: 14px;
+        font-size: 12px;
+    }
+
+    .catalog-item-price {
+        font-size: 12px;
+    }
+
+    .catalog-promo {
+        margin-bottom: 70px;
+    }
+
+    .promo-title {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 23px;
+    }
+
+    .catalog-btn {
+        padding: 21px 59px;
+        font-size: 18px;
     }
 }
 
@@ -522,6 +625,14 @@ body {
     .catalog-banner {
         height: 251px;
         background: url(../images/banner-tablet.png) no-repeat;
+        background-size: 100% 100%;
+        border-bottom: 1px solid #e5e5e5;
+    }
+}
+@media screen and (max-width: 768px) {
+    .catalog-banner {
+        height: 238px;
+        background: url(../images/banner-mobile.png) no-repeat;
         background-size: 100% 100%;
         border-bottom: 1px solid #e5e5e5;
     }
