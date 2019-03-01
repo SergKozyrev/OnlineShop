@@ -44,7 +44,6 @@ accordingly to action and discountedPrice of the element item provided in catalo
 “Total Cost” at the bottom and Total Cost and Quantity in the header should be updated
 accordingly to Quantity of removed items and their total discountedPrice.
 ### Extra miles
-This is list of bonus tasks that are not required to implement, but will give you a bonus if implemented.
 #### Item details page
 * Implement photos switcher.
   Click on thumbnail should replace main image with full size image of itself, and make thumbnail active.
