@@ -76,6 +76,9 @@ displayed and highlighted in filters bar. Otherwise filter category title should
 displayed (without highlight).
 #### Dynamic content rendering
 Catalog page must use dynamic content rendering.
+* Items from provided catalog.js should be:
+    Filtered by “category” “women” and “fashion” “Casual style”.
+    Ordered by date in descending order by “dateAdded” (newest first).
 * Promo block (“Last weekend extra 50% off…”) should be displayed after four items for desktop,
 3 items for tablet and 2 items on mobile. This should during page resize (without page reload).
 * Items that has hasNew property equal to true should be displayes with New laben near to the
