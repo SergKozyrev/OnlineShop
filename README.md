@@ -75,8 +75,7 @@ in single string with “, ” as separator. If filter category has selected val
 displayed and highlighted in filters bar. Otherwise filter category title should be
 displayed (without highlight).
 #### Dynamic content rendering
-Catalog page should be rendered using templates
-Use Lodash library or ES2015 template literals.
+Catalog page must use dynamic content rendering.
 * Promo block (“Last weekend extra 50% off…”) should be displayed after four items for desktop,
 3 items for tablet and 2 items on mobile. This should during page resize (without page reload).
 * Items that has hasNew property equal to true should be displayes with New laben near to the
@@ -85,5 +84,3 @@ price.
 layout (discounted percent should be calculated from price and discountedPrice)
 * If both price and discountedPrice fields are null – display value of placeholder field instead of
 price.
-* You should replace “thumbnail” properties values to paths to extracted images from layout files
-and use them in template.
