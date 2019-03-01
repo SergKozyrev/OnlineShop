@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
     let data = window.catalog;
-
+    let bagItem = document.getElementsByClassName("item")[0];
     // Создание товара
 
     function createItem(data) {
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function () {
                          <div class="item-details">
                          <h2 class="item-title">${data.title}</h2>
                          <p class="item-desc">${data.description}</p>
-                         <span class="item-price">${data.price}</span>
+                         ${data.discountedPrice === null && data.price === null ? "" : data.discountedPrice === data.price ? '<span class="item-price">'+ data.price +'</span>' : '<span class=item-price">'+ data.discountedPrice + ' -' + (100 - data.discountedPrice * 100 / data.price).toFixed() + '%'+'</span>' + '<span class="item-price">'+ data.price +'</span>'}
                          <ul class="item-sizes">Size:
                          ${data.sizes.map(size => `<li class="item-size">${size}</li>`).join(" ")}
                          </ul>
@@ -39,6 +39,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let itemSizes = document.getElementsByClassName("item-sizes")[0];
     let itemColors = document.getElementsByClassName("item-colors")[0];
 
+    // Thumbnails
     itemPreview.addEventListener("click", function (e) {
         let target = e.target;
         if (!target.classList.contains("item-preview-small")) return;
@@ -50,9 +51,9 @@ window.addEventListener("DOMContentLoaded", function () {
             imgWraps[i].classList.remove("active");
         }
         target.parentElement.classList.add("active");
-        console.log(imgSmallSrc);
     });
 
+    // Выбор размера
     itemSizes.addEventListener("click", function (e) {
         let target = e.target;
         if (!target.classList.contains("item-size")) return;
@@ -63,6 +64,7 @@ window.addEventListener("DOMContentLoaded", function () {
         target.classList.add("active");
     });
 
+    // Выбор цвета
     itemColors.addEventListener("click", function (e) {
         let target = e.target;
         if (!target.classList.contains("item-color")) return;
@@ -73,4 +75,47 @@ window.addEventListener("DOMContentLoaded", function () {
         target.classList.add("active");
     });
 
+    // Добавление выбраного товара в LocalStorage
+    bagItem.addEventListener("click", function (e) {
+        let target = e.target;
+        if (!target.classList.contains("toBagBtn")) return;
+        let title = this.getElementsByClassName("item-title")[0].innerHTML;
+        let price = this.getElementsByClassName("item-price")[0].innerHTML;
+        let imgSrc = this.getElementsByClassName("item-preview-big")[0].src;
+        let size = this.getElementsByClassName("item-sizes")[0].getElementsByClassName("active")[0] ? this.getElementsByClassName("item-sizes")[0].getElementsByClassName("active")[0].innerHTML : "";
+        let color = this.getElementsByClassName("item-colors")[0].getElementsByClassName("active")[0] ? this.getElementsByClassName("item-colors")[0].getElementsByClassName("active")[0].innerHTML : "";
+        let shopingItemsArray = JSON.parse(localStorage.getItem("shopingItems")) || [];
+        let shopingItems = {
+            title: title,
+            price: +price,
+            imgSrc: imgSrc,
+            size: size,
+            color: color,
+            quantity: 1
+        };
+        let index = 0;
+        let keys = shopingItemsArray.length ? Object.keys(shopingItemsArray[0]).length : 0;
+        for (let i = 0; i < shopingItemsArray.length; i++) {
+            let item = shopingItemsArray[i];
+            let check = 0;
+            for (let key in item) {
+                if (key === "quantity") continue;
+                if (shopingItems[key] === item[key]) {
+                    check++;
+                    index = i;
+                }
+                if (check === keys - 1) {
+                    shopingItemsArray[index].quantity++;
+                    localStorage.setItem("shopingItems", JSON.stringify(shopingItemsArray));
+                    setQuantity(shopingItemsArray);
+                    setTotalPrice(shopingItemsArray);
+                    return;
+                }
+            }
+        }
+        shopingItemsArray.push(shopingItems);
+        localStorage.setItem("shopingItems", JSON.stringify(shopingItemsArray));
+        setQuantity(shopingItemsArray);
+        setTotalPrice(shopingItemsArray);
+    });
 });

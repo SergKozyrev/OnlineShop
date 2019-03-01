@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let mobileFilter = document.getElementsByClassName("filter-list-mobile")[0];
     let items = document.getElementsByClassName("items-wrap")[0];
     let showMore = document.getElementsByClassName("catalog-btn")[0];
+    let bagItems = JSON.parse(localStorage.getItem("shopingItems"));
 
     // Фильтр
     filter.addEventListener("click", function (e) {
@@ -50,7 +51,8 @@ window.addEventListener("DOMContentLoaded", function () {
                           </div>
                           <h4 class="catalog-item-title">${data.title}</h4>
                           ${data.discountedPrice === null && data.price === null ? '<p class="catalog-item-placeholder">'+data.placeholder+'</p>' : data.discountedPrice === data.price ? '<span class="catalog-item-price">'+ data.price +'</span>' : '<span class="catalog-item-discount-price">'+ data.discountedPrice + ' -' + (100 - data.discountedPrice * 100 / data.price).toFixed() + '%'+'</span>' + '<span class="catalog-item-price">'+ data.price +'</span>'}
-                          ${data.hasNew ? '<span class="catalog-item-has-new">New</span>' : ''} `;
+                          ${data.hasNew ? '<span class="catalog-item-has-new">New</span>' : ''} 
+                          </div>`;
         return item;
     }
 
