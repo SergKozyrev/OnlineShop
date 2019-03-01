@@ -89,6 +89,8 @@ buyNow.addEventListener("click", function (e) {
         shopingItemsArray = [];
         localStorage.setItem("shopingItems", JSON.stringify(shopingItemsArray));
         setPriceBag(shopingItemsArray);
+        setQuantity(shopingItemsArray);
+        setTotalPrice(shopingItemsArray);
     }
     if (target.classList.contains("empty-bag")) {
         items.innerHTML = `<div class=message>
@@ -97,6 +99,8 @@ buyNow.addEventListener("click", function (e) {
         shopingItemsArray = [];
         localStorage.setItem("shopingItems", JSON.stringify(shopingItemsArray));
         setPriceBag(shopingItemsArray);
+        setQuantity(shopingItemsArray);
+        setTotalPrice(shopingItemsArray);
     }
 
 });
