@@ -18,6 +18,11 @@ $(document).ready(function () {
 window.addEventListener("DOMContentLoaded", function () {
     let data = window.catalog;
     let catalog = document.querySelector(".arrivals-wrapp");
+
+    function sortByDate(a, b) {
+        return new Date(b.dateAdded) - new Date(a.dateAdded);
+    }
+    data.sort(sortByDate);
     // Создание карточки
     function createItem(data) {
         let item = document.createElement("div");

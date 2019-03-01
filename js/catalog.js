@@ -5,8 +5,13 @@ window.addEventListener("DOMContentLoaded", function () {
     let mobileFilter = document.getElementsByClassName("filter-list-mobile")[0];
     let items = document.getElementsByClassName("items-wrap")[0];
     let showMore = document.getElementsByClassName("catalog-btn")[0];
-    let bagItems = JSON.parse(localStorage.getItem("shopingItems"));
 
+    function sortByDate(a, b) {
+        return new Date(b.dateAdded) - new Date(a.dateAdded);
+    }
+    let newData = data.filter(item => item.category === "women" && item.fashion === "Casual style")
+    newData.sort(sortByDate);
+    data.sort(sortByDate);
     // Фильтр
     filter.addEventListener("click", function (e) {
         let target = e.target;
@@ -58,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // Заполнение товарами
     for (let i = 0; i < 12; i++) {
-        items.appendChild(createItem(data[i]));
+        items.appendChild(createItem(newData[i]));
     }
 
     // Запомнить товар по которому был клик

@@ -72,6 +72,11 @@ items.addEventListener("click", function (e) {
         setQuantity(shopingItemsArray);
         setTotalPrice(shopingItemsArray);
         setPriceBag(shopingItemsArray);
+        if (shopingItemsArray.length === 0) {
+            items.innerHTML = `<div class=message>
+                                 <span>Your shopping bag is empty. Use Catalog to add new items</span>
+                               </div>`;
+        }
     }
 });
 

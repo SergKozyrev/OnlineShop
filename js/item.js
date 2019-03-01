@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function () {
                          <div class="item-details">
                          <h2 class="item-title">${data.title}</h2>
                          <p class="item-desc">${data.description}</p>
-                         ${data.discountedPrice === null && data.price === null ? "" : data.discountedPrice === data.price ? '<span class="item-price">'+ data.price +'</span>' : '<span class=item-price">'+ data.discountedPrice + ' -' + (100 - data.discountedPrice * 100 / data.price).toFixed() + '%'+'</span>' + '<span class="item-price">'+ data.price +'</span>'}
+                         ${data.discountedPrice === null && data.price === null ? "" : data.discountedPrice === data.price ? '<span class="item-price">'+ data.price +'</span>' : '<span class="item-price">'+ data.discountedPrice + '</span>'}
                          <ul class="item-sizes">Size:
                          ${data.sizes.map(size => `<li class="item-size">${size}</li>`).join(" ")}
                          </ul>
