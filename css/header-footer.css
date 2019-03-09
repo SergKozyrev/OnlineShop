@@ -303,7 +303,7 @@
 
     .user-bag {
         position: relative;
-        margin-left: 52px;
+        margin-left: 0;
     }
 
     .user-bag::after {
