@@ -1,4 +1,5 @@
 # OnlineShop
+https://sergkozyrev.github.io/OnlineShop/index.html
 ### Markup
 * For screen width larger than 375px (including) pages should use mobile layout.
 * For screen width larger than 768px (including) page should use tablet layout.
